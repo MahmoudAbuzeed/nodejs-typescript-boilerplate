@@ -1,4 +1,4 @@
-# Parcking Back-End Project Using Nodejs
+# NodeBoilerplate Back-End Project Using Nodejs
 
 This Project Related to Design Back-End For nodeBoilerplate Application
 
@@ -9,21 +9,17 @@ This Project Related to Design Back-End For nodeBoilerplate Application
 - MongoDB
 - Docker
 - PM2 Within Docker
-- RESTful Api's
+- RESTful Apis
 
 # Features
 
 - Dockerize Whole Services in YML File (Nginx, Nodejs, MongoDB)
-- Assign User to Each Card With Mutiple Cars
-- Added Strategy Design Pattern For Calculating Taxes
-- Calculating Taxes For Different Cases Like Hightway and Normal Gate
-- Caching User Using Redis Caching [Redis Expire Key Seconds] To Detect If User left within 1 Min (Not Implemented Yet)
 - CRUD Operations For all Entities
-- Service Layers Responsible For Bussiness Logic
+- Service Layers Responsible For Business Logic
 - Repository Layer Responsible For DB
 
 # Project Pictures
 
 # Quick Start
 
-- As Simple as Just npm i & docker-compose up
+- As Simple as Just npm i & docker-compose up --build
