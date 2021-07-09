@@ -1,0 +1,52 @@
+# Depends_on Control Services Startup Order
+# Don't Forget Set Environment Variables Before Run This yml file
+# APP_ENV=development || production
+# windows >> set APP_ENV=development
+version: "3"
+
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      dockerfile: ./docker/nginx.development.dockerfile
+    depends_on:
+      - nodeboilerplate
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - node-boilerplate-network
+
+  nodeboilerplate:
+    container_name: nodeboilerplate-Service
+    build:
+      context: .
+      dockerfile: ./docker/nodeboilerplate.node.development.dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/nodeboilerplate
+    depends_on:
+      - mongo
+    env_file:
+      - ./docker/env/app.development.env
+    networks:
+      - node-boilerplate-network
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    build:
+      context: .
+      dockerfile: ./docker/mongo.dockerfile
+    ports:
+      - "27017:27017"
+    env_file:
+      - ./docker/env/mongo.development.env
+    networks:
+      - node-boilerplate-network
+
+networks:
+  node-boilerplate-network:
+    driver: bridge
