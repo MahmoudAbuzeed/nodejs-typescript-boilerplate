@@ -1,6 +1,6 @@
 # NodeBoilerplate Back-End Project Using Nodejs
 
-This Project Related to Design Back-End For nodeBoilerplate Application
+This Project Related to Design Back-End For nodeJs Application
 
 # Project Dependencies
 
