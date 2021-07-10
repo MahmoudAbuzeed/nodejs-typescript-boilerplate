@@ -14,11 +14,18 @@ This Project Related to Design Back-End For nodeBoilerplate Application
 # Features
 
 - Dockerize Whole Services in YML File (Nginx, Nodejs, MongoDB)
-- CRUD Operations For all Entities
+- PM2 For Development & Production Environment Monitoring
 - Service Layers Responsible For Business Logic
+- CRUD Operations For all Entities
 - Repository Layer Responsible For DB
+- Logging And Monitoring
+- Central Error Handling
 
-# Project Pictures
+# TODO List
+
+- CI/CD Using Jenkins
+- Using Kubernetes For Automating Deployment, Scaling and Management Of Containerized App
+- Test Environment
 
 # Quick Start
 
